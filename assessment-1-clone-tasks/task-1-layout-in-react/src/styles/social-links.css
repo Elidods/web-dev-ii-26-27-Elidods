@@ -1,0 +1,28 @@
+.social-links {
+  display: flex;
+  gap: var(--icon-gap);
+}
+
+.social-links--column {
+  flex-direction: column;
+}
+
+.social-links--row {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-links__link {
+  display: block;
+}
+
+.social-links__icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  object-fit: contain;
+}
+
+/* The supplied X icon is white; turn it black on light backgrounds. */
+.social-links--on-light .social-links__icon--twitter {
+  filter: invert(1);
+}

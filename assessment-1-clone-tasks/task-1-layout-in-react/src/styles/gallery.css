@@ -1,0 +1,28 @@
+/* Four equal columns: the featured album fills a 2 × 2 block. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--color-content);
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.gallery__image--featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery__image--featured {
+    grid-row: auto;
+  }
+}

@@ -1,0 +1,29 @@
+/* Buttons: Teko at 2em, small (16px) spacing and border radius. */
+.button {
+  padding: var(--space-sm);
+  border: var(--border);
+  border-radius: var(--space-sm);
+  color: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: var(--button-size);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button--search {
+  background: var(--color-teal);
+}
+
+.button--watch {
+  background: var(--color-yellow);
+}
+
+.button:hover {
+  background: var(--color-white);
+}
+
+.button:active {
+  transform: translateY(2px);
+}

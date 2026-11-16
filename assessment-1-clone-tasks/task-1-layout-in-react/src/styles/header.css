@@ -1,0 +1,42 @@
+/* Shared by the header and footer navigation */
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 8px 24px;
+}
+
+.site-nav__link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-nav__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space);
+  padding: var(--space) var(--space) 0;
+  margin-bottom: var(--space);
+}
+
+.site-header__logo {
+  width: var(--logo-size);
+  height: auto;
+}
+
+.site-header__nav {
+  width: min(100%, var(--content-width));
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    padding-inline: 16px;
+  }
+}

@@ -1,0 +1,44 @@
+/* Mobile-first: these values apply from 360px, then change at each breakpoint. */
+:root {
+  /* watch.it brand colours (watch-it-brand-colours.png) */
+  --color-ink: #070410;
+  --color-purple: #231651;
+  --color-teal: #4dccbd;
+  --color-yellow: #eef36a;
+  --color-white: #ffffff;
+
+  /* Typography (loaded from Google Fonts in index.html) */
+  --font-heading: "Teko", "Arial Narrow", Impact, sans-serif;
+  --font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
+  --logo-size: 2em;
+  --card-text-size: 1.5em;
+  --button-size: 2em;
+
+  /* Spacing: small is always 16px, large grows with the screen */
+  --space-sm: 16px;
+  --space-lg: 16px;
+  --gutter: 0px; /* side margin of the content container */
+  --content-max: 900px;
+
+  /* Hard offset shadow used on the header and cards (tablet and up) */
+  --shadow-offset: 0px;
+  --border: 2px solid var(--color-ink);
+}
+
+/* Tablet: 720px – 1024px */
+@media (min-width: 720px) {
+  :root {
+    --logo-size: 3em;
+    --space-lg: 32px;
+    --gutter: 32px;
+    --shadow-offset: 12px;
+  }
+}
+
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+  :root {
+    --space-lg: 48px;
+    --gutter: 48px;
+  }
+}

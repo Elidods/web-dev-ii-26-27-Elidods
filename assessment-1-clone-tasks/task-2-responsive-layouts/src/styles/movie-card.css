@@ -1,0 +1,63 @@
+/* Base card (mobile and tablet): poster above, text and button below. */
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  background: var(--color-white);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--color-teal);
+}
+
+.movie-poster__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.movie-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+}
+
+.movie-description {
+  flex: 1;
+  font-size: var(--card-text-size);
+}
+
+.movie-description__title {
+  margin-bottom: 0.25em;
+  font-size: 1.25em;
+}
+
+.movie-description__text {
+  line-height: 1.35;
+}
+
+/* Desktop: featured card – wide banner, text on the left, button on the right. */
+@media (min-width: 1024px) {
+  .movie-card--featured .movie-poster__image {
+    aspect-ratio: 3 / 1;
+    object-position: center 22%;
+  }
+
+  .movie-card--featured .movie-card__body {
+    flex-direction: row;
+  }
+
+  .movie-card--featured .button--watch {
+    flex: 0 0 min(280px, 32%);
+  }
+
+  /* Desktop: horizontal cards – poster left, text and button right. */
+  .movie-card--horizontal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .movie-card--horizontal .movie-poster__image {
+    height: 100%;
+  }
+}

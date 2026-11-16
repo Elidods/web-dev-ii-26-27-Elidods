@@ -1,0 +1,27 @@
+/* Comments sit directly on the grey page colour, as in the wireframe. */
+.comments {
+  padding: var(--space);
+}
+
+.comments__heading {
+  margin-bottom: 1.5rem;
+}
+
+.comments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.comment {
+  max-width: 34rem;
+}
+
+.comment__author {
+  margin: 0;
+  font-weight: 700;
+}
+
+.comment__text {
+  margin: 0;
+}

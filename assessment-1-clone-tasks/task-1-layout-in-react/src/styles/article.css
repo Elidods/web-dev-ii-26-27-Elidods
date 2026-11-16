@@ -1,0 +1,58 @@
+.article {
+  padding: var(--space);
+  background: var(--color-content);
+}
+
+.article__header {
+  margin-bottom: var(--space);
+}
+
+.article__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  margin-bottom: 1.5rem;
+}
+
+.article__title-main {
+  font-size: var(--title-size);
+  line-height: 0.95;
+}
+
+.article__title-sub {
+  font-size: var(--subtitle-size);
+}
+
+.article__intro {
+  max-width: 50rem;
+  margin: 0;
+  font-size: var(--intro-size);
+  line-height: 1.5;
+}
+
+/* The wireframe flows the text across three columns, headings included. */
+.article__body {
+  column-count: 3;
+  column-gap: var(--space);
+}
+
+.article__heading {
+  margin-bottom: 1rem;
+  break-after: avoid;
+}
+
+.article__section:last-child p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  .article__body {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .article__body {
+    column-count: 1;
+  }
+}

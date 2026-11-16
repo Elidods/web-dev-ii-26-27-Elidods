@@ -1,0 +1,24 @@
+/* Primary content container: max 900px wide, large spacing around and between cards. */
+.movie-grid {
+  display: grid;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: calc(var(--content-max) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding: var(--space-lg) var(--gutter);
+}
+
+/* Tablet and desktop: two columns of cards. */
+@media (min-width: 720px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktop: the featured card and the horizontal cards span both columns. */
+@media (min-width: 1024px) {
+  .movie-grid > .movie-card--featured,
+  .movie-grid > .movie-card--horizontal {
+    grid-column: 1 / -1;
+  }
+}

@@ -1,0 +1,30 @@
+.author {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space);
+  padding: var(--space);
+  background: var(--color-content);
+}
+
+.author__text {
+  flex: 0 1 30rem;
+}
+
+.author__heading {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.author__text p {
+  margin-bottom: 0;
+}
+
+.author__photo {
+  flex: none;
+  width: var(--author-photo-size);
+  height: var(--author-photo-size);
+  border-radius: 50%;
+  object-fit: cover;
+}
